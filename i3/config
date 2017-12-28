@@ -274,9 +274,13 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-exec_always feh --bg-scale /home/florian/settings/background/arch-wp-1.jpg
+exec_always feh --bg-scale /home/florian/settings/background/arch-wp-2.png
 
-exec /home/florian/.config/other/update
+exec_always /home/florian/.config/other/update
+
+exec_always amixer set Speaker on
+
+exec_always amixer set Headphone on
 
 #exec Firefox
 #exec spotify

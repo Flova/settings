@@ -21,7 +21,7 @@ alert = #bd2c40
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 22
 bottom = true
 ;offset-x = 1%
 ;offset-y = 1%
@@ -145,7 +145,7 @@ label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+; label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
