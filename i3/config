@@ -250,9 +250,9 @@ mode "$mode_display" {
 # Declare here the shortcut to bring the display selection menu
 bindsym $mod+p mode "$mode_display"
 
+bindsym $mod+Shift+x exec i3lock -i /home/florian/settings/background/BSOD.png
 
-
-bindsym $mod+Shift+x exec i3lock --color "$base01"
+bindsym $mod+x exec /home/florian/settings/i3/launch_i3_lock.sh
 
 bindsym $mod+Shift+f exec firefox
 
