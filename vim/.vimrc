@@ -34,8 +34,8 @@ filetype on                  " required
 "execute pathogen#infect()
 
 " Everything will break if you remove solarized!!!!111elf!
-"colorscheme solarized
-"set background=dark
+" colorscheme solarized
+" set background=dark
 " colorscheme thinkpad
 
 set grepprg=grep\ -nH\ $*
