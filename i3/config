@@ -30,7 +30,7 @@ font pango:System San Francisco Display 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -250,6 +250,21 @@ mode "$mode_display" {
 # Declare here the shortcut to bring the display selection menu
 bindsym $mod+p mode "$mode_display"
 
+## Quickstart for Programs
+# Set the shortcuts
+set $mode_quickstart Quickstart (1) Firefox, (2) Atom, (3) Thunar, (4) Vim
+mode "$mode_quickstart" {
+  bindsym 1 exec firefox, mode "default"
+  bindsym 2 exec atom, mode "default"
+  bindsym 3 exec thunar, mode "default"
+  bindsym 4 exec termite -e vim, mode "default"
+
+  #back to normal: Return or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+bindsym $mod+q mode "$mode_quickstart"
+
 bindsym $mod+Shift+x exec i3lock -i /home/florian/settings/background/BSOD.png
 
 bindsym $mod+x exec /home/florian/settings/i3/launch_i3_lock.sh
@@ -279,6 +294,8 @@ exec_always /home/florian/.config/other/update
 exec_always amixer set Speaker on
 
 exec_always amixer set Headphone on
+
+for_window [class="Arandr"] floating enable
 
 #exec Firefox
 #exec spotify
