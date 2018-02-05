@@ -297,9 +297,11 @@ exec_always amixer set Speaker on
 exec_always amixer set Headphone on
 
 for_window [class="Arandr"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="SpeedCrunch"] floating enable
 
 exec nextcloud
 
-exec setxkbmap de 
+exec setxkbmap de
 #exec Firefox
 #exec spotify

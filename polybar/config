@@ -50,7 +50,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = volume cpu wlan eth battery date powermenu
+modules-right = volume cpu wlan eth battery date
 
 tray-position = right
 tray-padding = 2
@@ -299,7 +299,7 @@ format-charging-underline = #f4e241
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline =  #f45841
 
-format-full-prefix = "Full"
+format-full-prefix = "Full "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = #4bf442
 
