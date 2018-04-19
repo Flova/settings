@@ -1,0 +1,14 @@
+#!/bin/bash
+count=$(checkupdates | wc -l)
+if [ $count == 0 ]
+then 
+    text=Updates
+    count=Keine
+elif [ $count == 1 ]
+then
+    text=Update
+else
+    text=Updates
+fi
+notify-send "$count $text" "$(checkupdates | sed -r "s/([a-z_A-Z0-9\-]*) .*/\1/" | paste -sd "," | sed -r "s/,/, /g")"
+
