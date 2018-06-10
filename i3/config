@@ -253,10 +253,10 @@ bindsym $mod+p mode "$mode_display"
 
 ## Quickstart for Programs
 # Set the shortcuts
-set $mode_quickstart Quickstart (1) Firefox, (2) Atom, (3) Thunar, (4) Vim
+set $mode_quickstart Quickstart (1) Firefox, (2) VS Code, (3) Thunar, (4) Vim
 mode "$mode_quickstart" {
   bindsym 1 exec firefox, mode "default"
-  bindsym 2 exec atom, mode "default"
+  bindsym 2 exec code, mode "default"
   bindsym 3 exec thunar, mode "default"
   bindsym 4 exec termite -e vim, mode "default"
 
