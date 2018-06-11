@@ -1,5 +1,5 @@
 #!/bin/bash
-count=$(checkupdates | wc -l)
+count=$(yay -Pu | wc -l)
 if [ $count == 0 ]
 then 
     text=Updates
@@ -10,5 +10,5 @@ then
 else
     text=Updates
 fi
-notify-send "$count $text" "$(checkupdates | sed -r "s/([a-z_A-Z0-9\-]*) .*/\1/" | paste -sd "," | sed -r "s/,/, /g")"
+notify-send -t 5000 "$count $text" "$(yay -Pu | sed -r "s/([a-z_A-Z0-9\-]*) .*/\1/" | paste -sd "," | sed -r "s/,/, /g")"
 
