@@ -1,5 +1,14 @@
 #!/bin/bash
-count=$(yay -Pu | wc -l)
+if which yay &> /dev/null; then
+    cmd="yay -Pu"
+elif which yaourt &> /dev/null; then
+    cmd="yaourt -Qu"
+elif which checkupdates &> /dev/null; then
+    cmd="checkupdates"
+else
+    cmd="pacman -Qu"
+fi
+count=$($cmd | wc -l)
 if [ $count == 0 ]
 then 
     text=Updates
@@ -10,5 +19,4 @@ then
 else
     text=Updates
 fi
-notify-send -t 5000 "$count $text" "$(yay -Pu | sed -r "s/([a-z_A-Z0-9\-]*) .*/\1/" | paste -sd "," | sed -r "s/,/, /g")"
-
+notify-send "$count $text" "$($cmd | sed -r -e "s/([a-z_A-Z0-9\-]*) .*/\1/" | paste -sd "," | sed -r -e "s/,/, /g" -e "s/\x1B\[(([0-9]{1,2})?(;)?([0-9]{1,2})?)?[m,K,H,f,J]//g")"

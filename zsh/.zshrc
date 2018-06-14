@@ -93,5 +93,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias y="yaourt --noconfirm"
+function mkcd(){
+    mkdir -p $1
+    cd $1
+}
+function mksh(){
+    vim $1.sh
+    chmod 744 $1.sh
+}
 source /home/florian/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
