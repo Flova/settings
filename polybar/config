@@ -51,7 +51,7 @@ font-2 = Font Awesome:size=9;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = volume cpu wlan eth battery date
+modules-right = volume cpu eth battery date
 
 tray-position = right
 tray-padding = 2

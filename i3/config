@@ -307,5 +307,6 @@ for_window [class="TelegramDesktop"] move container to workspace 9
 exec nextcloud
 exec udiskie
 exec setxkbmap de
+exec_always nm-applet
 #exec Firefox
 #exec spotify
