@@ -8,9 +8,13 @@ elif which checkupdates &> /dev/null; then
 else
     cmd="pacman -Qu"
 fi
+if [ $1 == "-s" ]
+then
+    sleep $2
+fi
 count=$($cmd | wc -l)
 if [ $count == 0 ]
-then 
+then
     text=Updates
     count=Keine
 elif [ $count == 1 ]
