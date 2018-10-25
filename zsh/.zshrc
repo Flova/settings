@@ -101,4 +101,9 @@ function mksh(){
     vim $1.sh
     chmod 744 $1.sh
 }
+
+bindkey "^H" backward-kill-word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 source /home/florian/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
