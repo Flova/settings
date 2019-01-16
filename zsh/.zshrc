@@ -110,6 +110,7 @@ if [[ -n "$DOCKER" ]]; then
     # Settings for inside of the docker
     export PROMPT="%K{black} 🐋 %K{blue}%F{black}$PROMPT"  # Prefix the prompt with DOCKER
     export HISTFILE=$HOME/.zsh_history_docker
+    source $HOME/Projekt/bitbots/catkin_ws/devel/setup.zsh
     cd $HOME/Projekt/bitbots
 else
     # Settings for outside of the docker
