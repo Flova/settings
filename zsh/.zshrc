@@ -106,4 +106,17 @@ bindkey "^H" backward-kill-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+if [[ -n "$DOCKER" ]]; then
+    # Settings for inside of the docker
+    export PROMPT="%K{black} 🐋 %K{blue}%F{black}$PROMPT"  # Prefix the prompt with DOCKER
+    export HISTFILE=$HOME/.zsh_history_docker
+    cd $HOME/Projekt/bitbots
+else
+    # Settings for outside of the docker
+    function ros(){
+        clear
+        $HOME/Projekt/rosdocked/run
+    }
+fi
+
 source /home/florian/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
