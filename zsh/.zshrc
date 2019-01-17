@@ -112,11 +112,12 @@ if [[ -n "$DOCKER" ]]; then
     export HISTFILE=$HOME/.zsh_history_docker
     source $HOME/Projekt/bitbots/catkin_ws/devel/setup.zsh
     cd $HOME/Projekt/bitbots
+    clear
 else
     # Settings for outside of the docker
     function ros(){
         clear
-        $HOME/Projekt/rosdocked/run
+        $HOME/Projekt/rosdocked/connect
     }
 fi
 
