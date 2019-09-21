@@ -111,13 +111,14 @@ if [[ -n "$DOCKER" ]]; then
     export PROMPT="%K{black} 🐋 %K{blue}%F{black}$PROMPT"  # Prefix the prompt with DOCKER
     export HISTFILE=$HOME/.zsh_history_docker
     source $HOME/Projekt/bitbots/catkin_ws/devel/setup.zsh
+    source $HOME/Projekt/bitbots/cv_bridge_catkin_ws/devel/setup.zsh --extend
     cd $HOME/Projekt/bitbots
     clear
 else
     # Settings for outside of the docker
     function ros(){
         clear
-        $HOME/Projekt/rosdocked/connect
+        $HOME/Projekt/rosdocked/connect $@
     }
 fi
 
