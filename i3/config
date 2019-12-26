@@ -311,7 +311,12 @@ exec udiskie
 exec setxkbmap de
 exec_always nm-applet
 
+
+# Use horizontal scrolling
+exec --no-startup-id xinput --set-prop 13 "Synaptics Two-Finger Scrolling" 1 1
+
 # Use natural scrolling
-exec --no-startup-id synclient -l VertScrollDelta=-100 
+exec --no-startup-id synclient -l VertScrollDelta=-100 && synclient -l HorizScrollDelta=-100
+
 #exec Firefox
 #exec spotify
