@@ -310,5 +310,8 @@ exec nextcloud
 exec udiskie
 exec setxkbmap de
 exec_always nm-applet
+
+# Use natural scrolling
+exec --no-startup-id synclient -l VertScrollDelta=-100 
 #exec Firefox
 #exec spotify
