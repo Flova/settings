@@ -13,3 +13,6 @@ convert /tmp/screen_locked.png -filter Gaussian -resize 25% -define filter:sigma
 
 #launch i3lock
 i3lock -i /tmp/screen_locked.png -o '#191d0f' -w '#b22727' -l '#00A287'
+
+#remove screenshot
+rm /tmp/screen_locked.png
