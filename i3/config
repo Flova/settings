@@ -268,36 +268,44 @@ mode "$mode_quickstart" {
 }
 bindsym $mod+q mode "$mode_quickstart"
 
-bindsym $mod+Shift+x exec i3lock -u -i /home/florian/settings/background/BSOD.png
+#bindsym $mod+Shift+x exec i3lock -u -i /home/florian/settings/background/BSOD.png
 
-bindsym $mod+x exec /home/florian/settings/i3/launch_i3_lock.sh
+#bindsym $mod+x exec /home/florian/settings/i3/launch_i3_lock.sh
 
 bindsym $mod+Shift+f exec firefox
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id ~/settings/sound/mute.sh # mute sound
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id ~/settings/sound/mute.sh # mute sound
 
 #
 # # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
+#bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
+#bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 #
 #
 # # Media player controls
-bindsym XF86AudioPlay exec --no-startup-id ~/settings/sound/play.sh
-bindsym XF86AudioStop exec playerctl stop
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+#bindsym XF86AudioPlay exec --no-startup-id ~/settings/sound/play.sh
+#bindsym XF86AudioStop exec playerctl stop
+#bindsym XF86AudioNext exec playerctl next
+#bindsym XF86AudioPrev exec playerctl previous
 
-exec_always feh --bg-scale /home/florian/settings/background/identicon.png
+# GNOME stuff
+#
+exec --no-startup-id /usr/lib/gsd-xsettings
+exec_always --no-startup-id gnome-power-manager
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id gnome-flashback
 
-exec_always /home/florian/.config/other/update
 
-exec_always amixer set Speaker on
+#exec_always feh --bg-scale /home/florian/settings/background/identicon.png
 
-exec_always amixer set Headphone on
+#exec_always /home/florian/.config/other/update
+
+#exec_always amixer set Speaker on
+
+#exec_always amixer set Headphone on
 
 exec_always telegram-desktop
 
@@ -307,8 +315,8 @@ for_window [class="SpeedCrunch"] floating enable
 for_window [class="TelegramDesktop"] move container to workspace 9
 
 exec nextcloud
-exec udiskie
-exec setxkbmap de
+#exec udiskie
+#exec setxkbmap de
 exec_always nm-applet
 
 
@@ -320,3 +328,5 @@ exec --no-startup-id synclient -l VertScrollDelta=-100 && synclient -l HorizScro
 
 #exec Firefox
 #exec spotify
+#
+
