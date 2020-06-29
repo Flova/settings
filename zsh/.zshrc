@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/florian/.oh-my-zsh
@@ -108,10 +108,11 @@ bindkey "^[[1;5D" backward-word
 
 if [[ -n "$DOCKER" ]]; then
     # Settings for inside of the docker
-    export PROMPT="%K{black} 🐋 %K{blue}%F{black}$PROMPT"  # Prefix the prompt with DOCKER
+    export PROMPT="%K{black} 🐋 %K{blue}%F{black}%/ %f%k%F{blue}%f "  # Prefix the prompt with DOCKER
     export HISTFILE=$HOME/.zsh_history_docker
-    source $HOME/Projekt/bitbots/catkin_ws/devel/setup.zsh
-    source $HOME/Projekt/bitbots/cv_bridge_catkin_ws/devel/setup.zsh --extend
+    source /opt/ros/melodic/setup.zsh
+    #source $HOME/Projekt/bitbots/catkin_ws/devel/setup.zsh
+    #source $HOME/Projekt/bitbots/cv_bridge_catkin_ws/devel/setup.zsh --extend
     cd $HOME/Projekt/bitbots
     clear
 else
@@ -121,5 +122,8 @@ else
         $HOME/Projekt/rosdocked/connect $@
     }
 fi
+
+# Set default editor
+export VISUAL="vim"
 
 source /home/florian/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
