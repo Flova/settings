@@ -55,6 +55,7 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set mouse=a
+set undofile
 
 set laststatus=2
 set clipboard=unnamedplus
