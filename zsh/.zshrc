@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/florian/.oh-my-zsh
+export ZSH=/home/florian/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -70,7 +70,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US:en
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -108,13 +109,13 @@ bindkey "^[[1;5D" backward-word
 
 if [[ -n "$DOCKER" ]]; then
     # Settings for inside of the docker
-    export PROMPT="%K{black} 🐋 %K{blue}%F{black}%/ %f%k%F{blue}%f "  # Prefix the prompt with DOCKER
+    #export PROMPT="%K{black} 🐋 %K{blue}%F{black}%/ %f%k%F{blue}%f "  # Prefix the prompt with DOCKER
     export HISTFILE=$HOME/.zsh_history_docker
     source /opt/ros/melodic/setup.zsh
     #source $HOME/Projekt/bitbots/catkin_ws/devel/setup.zsh
     #source $HOME/Projekt/bitbots/cv_bridge_catkin_ws/devel/setup.zsh --extend
     cd $HOME/Projekt/bitbots
-    clear
+    #clear
 else
     # Settings for outside of the docker
     function ros(){
