@@ -123,3 +123,5 @@ else
 fi
 
 source /home/florian/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export PATH=$PATH:/home/florian/.local/bin  
