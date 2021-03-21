@@ -1,0 +1,14 @@
+version: '2' 
+
+services:
+  tiddly_wiki:
+    image: m0wer/tiddlywiki
+    container_name: tiddly_wiki
+    restart: always
+    ports:
+      - 5985:8080
+    env_file:
+      - credentials.env
+    volumes:
+      - /home/florian/.tiddlywiki:/var/lib/tiddlywiki
+
