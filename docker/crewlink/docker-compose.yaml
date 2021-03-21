@@ -1,0 +1,11 @@
+version: '2' 
+
+services:
+  crewlink:
+    image: ohmyguus/bettercrewlink-server:latest
+    container_name: crewlink
+    restart: always
+    ports:
+      - 9736:9736
+    environment:
+      - ADDRESS="https://crewlink.flova.de" 
