@@ -1,0 +1,15 @@
+version: '2' 
+
+services:
+  dd-agent:
+    image: gcr.io/datadoghq/agent:7
+    container_name: dd-agent
+    restart: always
+    environment:
+      - DD_SITE="datadoghq.eu"
+    env_file:
+      - credentials.env
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro 
+      - /proc/:/host/proc/:ro 
+      - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
