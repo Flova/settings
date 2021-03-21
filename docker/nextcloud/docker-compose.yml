@@ -1,0 +1,40 @@
+version: '2' 
+
+services:
+
+  db:
+    image: mariadb:10.5
+    container_name: nextcloud_db
+    restart: always
+    volumes:
+      - /mnt/flosplatte/nextcloud_docker/mysql:/var/lib/mysql
+    env_file:
+      - db.env
+    networks:
+      - nextcloudnet
+
+  redis:
+    image: redis:alpine
+    restart: always
+    networks:
+      - nextcloudnet
+
+  nextcloud:
+    image: nextcloud:20-apache
+    container_name: nextcloud_server
+    restart: always
+    ports:
+      - 8094:80
+    links:
+      - db
+      - redis
+    volumes:
+      - /mnt/flosplatte/nextcloud_docker/var_www_html:/var/www/html
+      - /mnt/flosplatte/nextcloud_docker/config:/var/www/html/config
+      - /mnt/flosplatte/nextcloud_docker/data:/var/www/html/data
+    networks:
+      - nextcloudnet
+
+networks:
+  nextcloudnet:
+    # empty
