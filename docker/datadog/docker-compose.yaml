@@ -6,7 +6,7 @@ services:
     container_name: dd-agent
     restart: always
     environment:
-      - DD_SITE="datadoghq.eu"
+      - DD_SITE=datadoghq.eu
     env_file:
       - credentials.env
     volumes:
