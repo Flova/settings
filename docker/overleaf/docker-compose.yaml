@@ -16,6 +16,7 @@ services:
             - overleaf_redis
         volumes:
             - /mnt/flosplatte/overleaf/overleaf:/var/lib/sharelatex
+            - /mnt/flosplatte/overleaf/texlive:/usr/local/texlive
         environment:
 
             SHARELATEX_APP_NAME: Overleaf
