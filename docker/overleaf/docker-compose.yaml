@@ -42,7 +42,7 @@ services:
             ## Set for SSL via nginx-proxy
             #VIRTUAL_HOST: 103.112.212.22
 
-            # SHARELATEX_SITE_URL: http://sharelatex.mydomain.com
+            SHARELATEX_SITE_URL: https://overleaf.flova.de
             # SHARELATEX_NAV_TITLE: Our ShareLaTeX Instance
             # SHARELATEX_HEADER_IMAGE_URL: http://somewhere.com/mylogo.png
             # SHARELATEX_ADMIN_EMAIL: support@it.com
