@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   impostor:
-    image: aeonlucid/impostor:nightly
+    image: aeonlucid/impostor:latest
     container_name: impostor
     ports:
       - 22023:22023/udp
