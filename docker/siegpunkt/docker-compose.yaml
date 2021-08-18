@@ -1,0 +1,11 @@
+version: '2' 
+
+services:
+  siegpunkt:
+    image: flova/siegpunkt:latest
+    container_name: siegpunkt
+    restart: always
+    ports:
+      - 9745:8000
+    volumes:
+      - /mnt/flosplatte/siegpunkt:/Siegpunkt/siegpunkt/database 
