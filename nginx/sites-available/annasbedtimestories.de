@@ -1,5 +1,5 @@
 server {
-    server_name  www.annasbedtimestories.de;
+    server_name annasbedtimestories.flova.de;
     root 	/var/www/flova/annas_bedtime_story_generator/;
 
     # restricts access for all .git folders and .htaccess files
@@ -26,20 +26,21 @@ server {
 
 
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/www.annasbedtimestories.de/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/www.annasbedtimestories.de/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/annasbedtimestories.flova.de/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/annasbedtimestories.flova.de/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
 
 }
 
 server {
-    if ($host = www.annasbedtimestories.de) {
+    if ($host = annasbedtimestories.flova.de) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
 
-    server_name  www.annasbedtimestories.de;
+    server_name  annasbedtimestories.flova.de;
     listen 80;
     return 404; # managed by Certbot
 
