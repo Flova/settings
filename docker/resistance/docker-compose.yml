@@ -1,0 +1,10 @@
+version: "3.1"
+services:
+  resistance:
+    container_name: resistance
+    build: https://gitlab.com/rnxpyke/resistance.git
+    restart: always
+    ports:
+      - 3001:3001
+    environment:
+      - RUST_LOG=debug
