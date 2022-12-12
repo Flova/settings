@@ -13,4 +13,4 @@ services:
       - EULA=TRUE 
       - ENABLE_AUTOPAUSE=TRUE 
       - AUTOPAUSE_TIMEOUT_EST=900 
-      - MAX_MEMORY=3G
+      - MAX_MEMORY=5G
