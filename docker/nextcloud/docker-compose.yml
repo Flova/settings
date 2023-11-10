@@ -3,7 +3,7 @@ version: '2'
 services:
 
   db:
-    image: mariadb:10.5
+    image: mariadb:10.6
     container_name: nextcloud_db
     restart: always
     volumes:
@@ -21,7 +21,7 @@ services:
       - nextcloudnet
 
   nextcloud:
-    image: nextcloud:25-apache
+    image: nextcloud:26-apache
     container_name: nextcloud_server
     restart: always
     ports:
