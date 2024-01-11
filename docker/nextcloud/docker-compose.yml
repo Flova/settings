@@ -21,7 +21,7 @@ services:
       - nextcloudnet
 
   nextcloud:
-    image: nextcloud:26-apache
+    image: nextcloud:27-apache
     container_name: nextcloud_server
     restart: always
     ports:
